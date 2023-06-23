@@ -2,9 +2,12 @@ import Image from 'next/image'
 import CardVideo from '../Individuals/CardVideo';
 import PeajeSlide from '../Individuals/PeajeSlide';
 import ItsSlide from '../Individuals/ItsSlide';
+import SecuritySlide from '../Individuals/SecuritySlide';
+import MaintainSlide from '../Individuals/MaintainSlide';
 
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+
 
 function Lista({ datos, sectionRefProp }) {
   const style = 'transform transition duration-1000 hover:scale-105 hover:transition hover:duration-1000 ease-in-out flex flex-col justify-center items-center align-center relative w-full h-full min-w-[200px] min-h-[50vh] overflow-hidden';
@@ -55,6 +58,8 @@ function Lista({ datos, sectionRefProp }) {
 
       {item.key === 1 && showSlide ? <PeajeSlide onCloseSlide={handleClick}/> : null }
       {item.key === 2 && showSlide ? <ItsSlide onCloseSlide={handleClick}/> : null }
+      {item.key === 3 && showSlide ? <SecuritySlide onCloseSlide={handleClick}/> : null }
+      {item.key === 4 && showSlide ? <MaintainSlide onCloseSlide={handleClick}/> : null}
 
         <div className={style} ref={svgRef} onClick={handleClick}>
           <Image src={item.img} width={225} alt={item.text} className='z-30 shadow-outline pointer-events-none'/>

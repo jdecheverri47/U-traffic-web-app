@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ItsCards from "../Containers/ItsCards";
 
 function ItsSlide({ onCloseSlide }) {
@@ -56,12 +55,6 @@ function ItsSlide({ onCloseSlide }) {
               </div>
             </div>
           </div>
-
-        </div>
-
-      {/* Background Image */}
-        <div className="h-full w-full fixed -z-10 top-0 left-0">
-          <Image src='/assets/images/Itsbg.png' alt='Peaje Imagen' width={2000} height={2500} style={{objectFit: "cover", objectPosition: "center", aspectRatio: '16/9'}} quality={100} priority={true} />
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ function PeajeSlide({ onCloseSlide }) {
         </div>
 
         <div>
-          <h1 className='text-cyan-950 bg-emerald-300 absolute text-6xl font-bold uppercase ml-[5rem] h-fit p-3 text-center'>P <br/>e <br/>a <br/>j <br/>e</h1>
+          <h1 className='text-cyan-950 bg-emerald-300 absolute text-6xl font-bold uppercase ml-[5rem] h-fit p-3 text-center'>P <br/>e <br/>a <br/>j <br/>e <br /> s</h1>
         </div>
 
       {/* Background Image */}

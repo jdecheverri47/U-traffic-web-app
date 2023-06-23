@@ -33,10 +33,11 @@ body {
 }
 
 .container-its {
-  background-image: url("/public/assets/images/Itsbg.png");
+  background-image: url("/assets/images/Itsbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   width: 100vw;
 }
+
