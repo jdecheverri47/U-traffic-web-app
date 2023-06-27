@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import logoPicture from '/public/assets/images/logo.png'
 
+const styleNavText = 'py-3 px-2 text-center text-lg'
 
 function NavBar() {
   return (
@@ -17,14 +18,10 @@ function NavBar() {
           </div>
           <div className="flex flex-wrap flex-row justify-between gap-8 items-center">
             <ul className="flex flex-wrap flex-row justify-between gap-8 text-cyan-950 font-semibold">
-              <li className='py-3 px-4 transition-all ease-in duration-300 rounded-md -z-2'><a href="#">Nosotros</a></li>
-              <li className='py-3 px-4'><a href="/about">Que Hacemos</a></li>
-              <li className='py-3 px-4'><a href="/contact">Contacto</a></li>
+              <li className={styleNavText}><a href="#first-section">Nosotros</a></li>
+              <li className={styleNavText}><a href="#second-section">Que Hacemos</a></li>
+              <li className={styleNavText}><a href="#third-section">Contacto</a></li>
             </ul>
-
-            <div className='mr-8'>
-              <button type="submit" className="py-2 px-6 bg-cyan-800 text-white rounded-md">Hablémos</button>
-            </div>
           </div>
         </nav>
       </header>

@@ -72,7 +72,7 @@ function SeccionDos() {
   }, [])
 
   return (
-    <section className='grid grid-cols-2 w-screen h-screen bg-cyan-950' ref={sectionRef}>
+    <section className='grid grid-cols-2 w-screen h-screen bg-cyan-950' id='second-section' ref={sectionRef}>
       {datos.map((dato, index) => (
         <div key={dato.key} className='grid-span-1 h-full bg-cyan-950'>
           <Lista datos={datos.slice(index, index + 1)} sectionRefProp={sectionRef} />

@@ -3,7 +3,7 @@ import TollsLogos from '../Containers/TollsLogos';
 
 function PeajeSlide({ onCloseSlide }) {
 
-  const classNameH2 = 'text-cyan-950 text-2xl ml-3'
+  const classNameH2 = 'text-cyan-950 text-2xl ml-3 md:text-xl'
 
   const closeSlide = () => {
     console.log(onCloseSlide)
@@ -49,10 +49,10 @@ function PeajeSlide({ onCloseSlide }) {
           <TollsLogos />
         </div>
         <div className='bg-slate-100'>
-          <h1 className='uppercase text-6xl text-cyan-950 font-bold ml-10 mt-14'>Experiencia</h1>
-          <h2 className='text-cyan-950 text-4xl ml-10 mt-2'>Integrador para soluciones <strong className='uppercase'>ip rev</strong></h2>
+          <h1 className='uppercase text-6xl text-cyan-950 font-bold ml-10 mt-14 md:text-5xl'>Experiencia</h1>
+          <h2 className='text-cyan-950 text-4xl ml-10 mt-2 md:text-3xl'>Integrador para soluciones <strong className='uppercase'>ip rev</strong></h2>
 
-          <div className='grid grid-cols-3 mt-12 mx-10'>
+          <div className='grid xl:grid-cols-3 xl:mt-12 mx-10 md:grid-rows-3 md:mt-8 '>
             <div className='flex items-center'>
               <h1 className='text-cyan-950 font-bold text-6xl'>36</h1>
               <h2 className={classNameH2}>Carriles <br/> manuales</h2>
@@ -67,8 +67,8 @@ function PeajeSlide({ onCloseSlide }) {
             </div>
           </div>
 
-          <div className='absolute bg-emerald-300 bottom-[22.5rem] p-5 ml-5 rounded-br-[2rem]'>
-            <h1 className='text-cyan-950 text-3xl uppercase font-bold'>más de 15 años de experiencia</h1>
+          <div className='absolute bg-emerald-300 bottom-[22.5rem] p-5 ml-5 rounded-br-[2rem] md:bottom-[24rem] md:p-3 '>
+            <h1 className='text-cyan-950 text-3xl uppercase font-bold md:text-xl'>más de 15 años de experiencia</h1>
           </div>
         </div>
       </div>

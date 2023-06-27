@@ -36,7 +36,7 @@ function FirstSectionReplace() {
     }
   }, [])
   return (
-      <section className='w-screen relative flex justify-center items-center overflow-hidden shadow-2xl' ref={sectionRef} >
+      <section className='w-screen relative flex justify-center items-center overflow-hidden shadow-2xl' id="first-section" ref={sectionRef} >
         <div className='relative w-full h-screen overflow-hidden aspect-video main-video'>
           <MainVideo />
         </div>

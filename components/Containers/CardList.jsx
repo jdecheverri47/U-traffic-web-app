@@ -62,11 +62,14 @@ function Lista({ datos, sectionRefProp }) {
       {item.key === 4 && showSlide ? <MaintainSlide onCloseSlide={handleClick}/> : null}
 
         <div className={style} ref={svgRef} onClick={handleClick}>
-          <Image src={item.img} width={225} alt={item.text} className='z-30 shadow-outline pointer-events-none'/>
+          <div className='2xl:w-[14rem] md:w-[10rem] z-50 '>
+            <Image src={item.img} width={225} alt={item.text} className='z-30 shadow-outline pointer-events-none'/>
+          </div>
+          
           <h1 className='text-white text-center font-semibold text-2xl mt-5 z-30 pointer-events-none' style={textStyle}>
             {item.text}
           </h1>
-
+          
           <CardVideo video={item.video} />
 
 

@@ -26,7 +26,7 @@ const LogosData = [
 function TollsLogos() {
   const logos = LogosData.map((logo) => (
       <div key={logo.id} className='flex justify-center items-center w-full h-full flex-wrap flex-col '>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center 2xl:w-full md:w-[8rem] md:z-40 '>
           <Image src={logo.img} width={90} height={90} alt={logo.description} />
         </div>
         <div className='flex justify-center items-center h-fit mt-5'>

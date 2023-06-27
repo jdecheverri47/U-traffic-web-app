@@ -56,8 +56,8 @@ function PresentationText() {
   }, [])
   return (
     <div className='overflow-hidden min-w-fit px-[100vw] absolute py-5 z-10 text-center whitespace-nowrap bg-opacity-75 bg-cyan-950' ref={bgRef}>
-      <h1 className="text-[12rem] text-center text-emerald-300 font-extrabold min-w-fit title" style={textStyle} >
-        U TRAFFIC
+      <h1 className="text-[14rem] text-center text-emerald-300 font-extrabold min-w-fit title" style={textStyle} >
+        U Traffic
       </h1>
 
       <h2 className="text-white font-semibold text-5xl mb-8 subtitle" style={textStyle} >
