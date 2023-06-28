@@ -1,4 +1,5 @@
 import ItsCards from "../Containers/ItsCards";
+import CloseButton from "../UI /CloseButton";
 
 function ItsSlide({ onCloseSlide }) {
 
@@ -12,11 +13,11 @@ function ItsSlide({ onCloseSlide }) {
   }
 
   return (
-    <div className='absolute h-screen w-screen bg-cyan-950 z-30 overflow-hidden flex justify-center items-center container-its top-0 left-0'>
+    <div className='absolute h-screen w-screen bg-cyan-950 z-30 overflow-hidden flex justify-center items-center container-its top-0 left-0 cursor-auto'>
       <div>
       {/* Close Button */}
-        <div>
-          <button onClick={closeSlide} className='absolute text-white right-0 top-0 mr-5 mt-5'>Close</button>
+        <div className="absolute top-0 right-0">
+          <CloseButton closeSlide={closeSlide}/>
         </div>
 
         <div className="h-[80vh] w-[90vw] absolute bottom-[11%] left-[5%] bg-white rounded-xl bg-opacity-80 shadow-2xl grid grid-cols-2">
@@ -38,7 +39,7 @@ function ItsSlide({ onCloseSlide }) {
               <h1 className='text-white text-3xl uppercase font-bold'>más de 15 años de experiencia</h1>
             </div>
 
-            <div className="mt-[10rem]">
+            <div className="2xl:mt-[10rem] xl:mt-[7.2rem] ">
               <div className='grid grid-rows-3 mt-6 mx-10 gap-12 justify-center items-center'>
                 <div className={classContainer}>
                   <h1 className='text-cyan-950 font-bold text-8xl text-center'>35Km</h1>

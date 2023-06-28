@@ -53,14 +53,14 @@ function ContactBubbles() {
 
   const bubblesRender = bubbles.map((bubble, index) => {
     return (
-      <div key={index} className="rounded-full bg-white w-[200px] h-[200px] overflow-hidden flex justify-center items-center m-8" style={{
+      <div key={index} className="rounded-full bg-white 2xl:w-[200px] 2xl:h-[200px] md:w-[150px] md:h-[150px] sm:w-[100px] sm:h-[100px] overflow-hidden flex justify-center items-center m-8" style={{
         boxShadow: 'rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset'
       }} ref={bubble.ref}>
         <Image
           src={bubble.icon}
           alt={bubble.alt}
-          width={100}
-          height={100}
+          width={90}
+          height={90}
           quality={100}
           className="shadow-outline"
         />

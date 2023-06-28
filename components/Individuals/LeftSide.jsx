@@ -7,7 +7,10 @@ function LeftSide( ) {
 
   return (
     <div className="bg-cyan-950" ref={leftRef}>
-      <h1 className='text-center text-8xl text-emerald-300 mt-32 pt-1 font-bold uppercase'>Contáctanos</h1>
+      <div className="w-full flex justify-center">
+        <h1 className='text-center md:text-7xl xl:text-8xl text-emerald-300 mt-[7rem] font-bold uppercase h-fit w-fit'>Contáctanos</h1>
+      </div>
+      
 
       <div className="flex flex-wrap flex-row justify-center items-center mt-20">
         <ContactBubbles />

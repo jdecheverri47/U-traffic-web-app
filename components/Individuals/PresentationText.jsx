@@ -56,6 +56,7 @@ function PresentationText() {
   }, [])
   return (
     <div className='overflow-hidden min-w-fit px-[100vw] absolute py-5 z-10 text-center whitespace-nowrap bg-opacity-75 bg-cyan-950' ref={bgRef}>
+      <div className="w-[2rem] h-[2rem] bg-white rounded-full absolute top-[5rem] ml-[3.5rem] z-40" />
       <h1 className="text-[14rem] text-center text-emerald-300 font-extrabold min-w-fit title" style={textStyle} >
         U Traffic
       </h1>
