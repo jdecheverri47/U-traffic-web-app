@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import CloseButton from '../UI /CloseButton'
+import CloseButton from '../UI/CloseButton'
 
 function MaintainSection({onCloseSlide}) {
   const classNameH2 = 'text-cyan-950 text-2xl w-[6rem] ml-5'

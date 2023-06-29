@@ -1,26 +1,40 @@
-import Image from 'next/image'
+'use client'
 import TollsLogos from '../Containers/TollsLogos';
-import CloseButton from '../UI/CloseButton';
 
-function PeajeSlide({ onCloseSlide }) {
+import { useEffect, useRef } from "react"
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+function PeajeSlide() {
 
   const classNameH2 = 'text-cyan-950 xl:text-2xl ml-3 md:text-xl'
+  const sectionRef = useRef(null)
 
-  const closeSlide = () => {
-    console.log(onCloseSlide)
-    onCloseSlide();
-    console.log('working close Slide')
-  }
+  useEffect(() => {
+    let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
+    const tollsSection = sectionRef.current
+      gsap.to(tollsSection, {
+        backgroundPosition: () => `50% ${window.innerHeight * (1 - getRatio(tollsSection))}px`,
+        scrollTrigger: {
+          trigger: tollsSection,
+          start: "top top",
+          end: "bottom top",
+          pin: true,
+          pinSpacing: true,
+          scrub: 2,
+          // markers: true,
+        },
+      });
+  }, [])
 
   return (
-    <div className='absolute h-screen w-screen bg-cyan-950 z-30 left-0 bottom-0 grid grid-cols-2 overflow-hidden cursor-auto'>
+    <section className='relative h-screen w-screen bg-cyan-950 z-30 left-0 bottom-0 grid grid-cols-2 overflow-hidden cursor-auto' ref={sectionRef}>
     {/* Tolls Module(Left) */}
       <div className='tolls-slide'>
-      {/* Close Button */}
-        <CloseButton closeSlide={closeSlide}/>
 
       {/* U TOLL Card */}
-        <div className='bg-cyan-950 w-[18rem] xl:h-[20rem] md:w-[15rem] md:h-[18rem] absolute bottom-[5rem] left-[5rem] p-5 gap-1 rounded-br-[70px] border border-cyan-800 shadow-xl bg-opacity-80'>
+        <div className='bg-cyan-950 w-[18rem] xl:h-[20rem] md:w-[15rem] md:h-[18rem] relative left-[5rem] top-[5rem] p-5 gap-1 rounded-br-[70px] border border-cyan-800 shadow-xl bg-opacity-80'>
           <h1 className='text-emerald-300 text-4xl font-bold mb-3'>U TOLL</h1>
           <span className='text-emerald-300 pt-2'>
             Software propio para la
@@ -35,7 +49,7 @@ function PeajeSlide({ onCloseSlide }) {
         </div>
 
         <div>
-          <h1 className='text-cyan-950 bg-emerald-300 absolute xl:text-6xl md:text-5xl font-bold uppercase ml-[5rem] h-fit p-3 text-center'>P <br/>e <br/>a <br/>j <br/>e <br /> s</h1>
+          <h1 className='text-cyan-950 bg-emerald-300 relative xl:text-6xl md:text-5xl font-bold uppercase h-fit w-full p-3 text-center top-[30rem]'>Peajes</h1>
         </div>
       </div>
 
@@ -63,12 +77,12 @@ function PeajeSlide({ onCloseSlide }) {
             </div>
           </div>
 
-          <div className='absolute bg-emerald-300 2xl:bottom-[28rem] xl:p-5 ml-5 rounded-br-[2rem] xl:bottom-[24rem] md:p-3 md:bottom-[21.5rem]'>
-            <h1 className='text-cyan-950 xl:text-3xl uppercase font-bold md:text-xl'>más de 15 años de experiencia</h1>
+          <div className='relative bg-emerald-300 w-[35rem] 2xl:bottom-[27rem] xl:p-5 ml-5 rounded-br-[2rem] xl:bottom-[24rem] md:p-3 md:bottom-[21.5rem]'>
+            <h1 className='text-cyan-950 xl:text-3xl uppercase font-bold md:text-xl '>más de 15 años de experiencia</h1>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

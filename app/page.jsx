@@ -1,6 +1,7 @@
 import FirstSectionReplace from "@/components/Sections/FirstSectionReplace"
 import SecondSection from "@/components/Sections/SecondSection"
 import ThirdSection from "@/components/Sections/ThirdSection"
+import TollsSection from "@/components/Sections/TollsSection"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       {/* <FirstSection /> */}
       <FirstSectionReplace />
       <SecondSection />
+      <TollsSection />
       <ThirdSection />
     </main>
   )

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SecurityCards from "../Containers/SecurityCards";
-import CloseButton from "../UI /CloseButton";
+import CloseButton from "../UI/CloseButton";
 
 function SecuritySlide({ onCloseSlide }) {
   const classNameH2 = 'text-white text-3xl ml-3 text-start'

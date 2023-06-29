@@ -1,9 +1,31 @@
 import { ContextProps } from "../Composable/ContextProps"
 import { useContext } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { useEffect, useRef } from "react"
 
 function RightSide() {
   const { rightRef } = useContext(ContextProps)
   const classInput = 'text-left text-xl outline-none h-[40px] xl:w-[25rem] md:w-[20rem] bg-transparent placeholder-cyan-950 text-cyan-950 border-b border-cyan-950 mt-7';
+  const circleRef = useRef(null)
+  useEffect(() => {
+    const circle = circleRef.current
+    const handleMouseMove = (event) => {
+      // Obtén las coordenadas del ratón relativas al círculo
+      const rect = circle.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+  
+      // Anima el círculo hacia las coordenadas del ratón
+      gsap.to(circle, {
+        x: mouseX,
+        y: mouseY,
+        duration: 0.5,
+        ease: 'power3.out',
+      });
+    };
+    circle.addEventListener('mousemove', handleMouseMove);
+  }, [])
 
   return (
     <div className="bg-emerald-300 px-10" ref={rightRef}>
@@ -25,7 +47,7 @@ function RightSide() {
           </div>
 
           <div className="flex flex-row justify-end">
-            <button type="submit" className="bg-cyan-950 text-emerald-300 font-semibold xl:text-2xl md:text-xl rounded-full xl:w-[150px] xl:h-[150px] md:w-[100px] md:h-[100px] p-15 mb-5 xl:mr-20 flex items-center justify-center">Enviar</button>
+            <button type="submit" className="bg-cyan-950 text-emerald-300 font-semibold xl:text-2xl md:text-xl rounded-full xl:w-[150px] xl:h-[150px] md:w-[100px] md:h-[100px] p-15 mb-5 xl:mr-20 flex items-center justify-center mr-[5rem]" ref={circleRef}>Enviar</button>
           </div>
         </div>
       </div>

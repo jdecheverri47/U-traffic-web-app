@@ -1,5 +1,5 @@
 import ItsCards from "../Containers/ItsCards";
-import CloseButton from "../UI /CloseButton";
+import CloseButton from "../UI/CloseButton";
 
 function ItsSlide({ onCloseSlide }) {
 

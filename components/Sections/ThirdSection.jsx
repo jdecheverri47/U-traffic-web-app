@@ -41,7 +41,7 @@ function ThirdSection() {
   }, [])
 
   return (
-    <section className='w-screen h-screen overflow-hidden relative' id='third-section' ref={sectionThree}>
+    <section className='w-screen h-screen overflow-hidden relative bg-neutral-800' id='third-section' ref={sectionThree}>
       <ContextProps.Provider value={{ leftRef, rightRef }}>
         <Contact />
       </ContextProps.Provider>

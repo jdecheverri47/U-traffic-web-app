@@ -8,7 +8,6 @@ import MaintainSlide from '../Individuals/MaintainSlide';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
-
 function Lista({ datos, sectionRefProp }) {
   const style = 'transform transition duration-1000 hover:scale-105 hover:transition hover:duration-1000 ease-in-out flex flex-col justify-center items-center align-center relative w-full h-full min-w-[200px] min-h-[50vh] overflow-hidden';
   const svgRef = useRef(null);
@@ -19,7 +18,6 @@ function Lista({ datos, sectionRefProp }) {
   const handleClick = () => {
     setShowSlide(!showSlide);
   };
-
 
   useEffect(() => {
     const svg = svgRef.current;
@@ -54,7 +52,7 @@ function Lista({ datos, sectionRefProp }) {
 
   const cards = datos.map((item) => {
     return (
-      <div key={item.key} className={`flex flex-col justify-center items-center align-center ${item.color} min-w-[200px] min-h-[50vh] overflow-hidden hover:cursor-pointer`} >
+      <div key={item.key} className={`flex flex-col justify-center items-center align-center ${item.color} min-w-[200px] min-h-[50vh] overflow-hidden hover:cursor-pointer`}>
 
       {item.key === 1 && showSlide ? <PeajeSlide onCloseSlide={handleClick}/> : null }
       {item.key === 2 && showSlide ? <ItsSlide onCloseSlide={handleClick}/> : null }
