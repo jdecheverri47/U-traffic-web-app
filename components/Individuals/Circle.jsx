@@ -60,19 +60,12 @@ function Circle( {sectionRefProp}) {
     }
   }, [sectionRefProp])
   return (
-    <div
+    <div className="2xl:w-[300px] 2xl:h-[300px] lg:w-[200px] lg:h-[200px] 2xl:text-[1.5rem] lg:text-[1rem] absolute bg-white justify-center items-center"
       style={{
-        width: '300px',
-        height: '300px',
         borderRadius: '50%',
-        backgroundColor: 'white',
-        position: 'absolute',
         display: 'none',
-        justifyContent: 'center',
-        alignItems: 'center',
         top: '35%',
         left: '50%',
-        fontSize: '1.5rem',
         fontWeight: 'bold',
         textAlign: 'center',
         textTransform: 'uppercase',

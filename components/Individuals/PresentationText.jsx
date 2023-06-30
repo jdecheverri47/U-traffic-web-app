@@ -56,18 +56,18 @@ function PresentationText() {
   }, [])
   return (
     <div className='overflow-hidden min-w-fit px-[100vw] absolute py-5 z-10 text-center whitespace-nowrap bg-opacity-75 bg-cyan-950' ref={bgRef}>
-      <div className="w-[2rem] h-[2rem] bg-white rounded-full absolute top-[5rem] ml-[3.5rem] z-40" />
-      <h1 className="text-[14rem] text-center text-emerald-300 font-extrabold min-w-fit title" style={textStyle} >
+      {/* <div className="w-[2rem] h-[2rem] bg-white rounded-full absolute top-[5rem] ml-[3.5rem] z-40 lg:top-[3.5rem] lg:ml-[2.5rem] lg:w-[1.5rem] lg:h-[1.5rem] 2xl:w-[5rem] 2xl:h-[5rem]" /> */}
+      <h1 className="xl:text-[14rem] lg:text-[10rem] text-center text-emerald-300 font-extrabold min-w-fit title" style={textStyle} >
         U Traffic
       </h1>
 
-      <h2 className="text-white font-semibold text-5xl mb-8 subtitle" style={textStyle} >
+      <h2 className="text-white font-semibold text-5xl mb-8 subtitle lg:text-3xl" style={textStyle} >
         SOMOS EL ONE STOP SHOP
         <br/>
           DE LAS CONCESIONES VIALES
       </h2>
 
-      <h3 className=" text-emerald-300 font-semibold text-3xl mb-8 slogan" style={textStyle} >
+      <h3 className=" text-emerald-300 font-semibold text-3xl lg:text-2xl mb-8 slogan" style={textStyle} >
         Solución integral para peajes, <br/>
         ITS y operación de concesiones viales.
       </h3>

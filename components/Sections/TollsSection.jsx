@@ -22,7 +22,7 @@ function PeajeSlide() {
           end: "bottom top",
           pin: true,
           pinSpacing: true,
-          scrub: 2,
+          scrub: true,
           // markers: true,
         },
       });

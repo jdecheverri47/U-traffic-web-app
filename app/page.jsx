@@ -9,7 +9,7 @@ export default function Home() {
       {/* <FirstSection /> */}
       <FirstSectionReplace />
       <SecondSection />
-      <TollsSection />
+      {/* <TollsSection /> */}
       <ThirdSection />
     </main>
   )
